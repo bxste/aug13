@@ -1,0 +1,157 @@
+<div class="container">
+    <div *ngIf="errormsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{errormsg}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+      <div *ngIf="successmsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{successmsg}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    
+    <!-- <form [formGroup]="userForm" (ngSubmit)="userSubmit()">
+        <div class="col-lg-6 mt-2">
+            <input type="text" class="form-control" formControlName="id" placeholder="Enter id">
+        </div>
+        
+        <div class="col-lg-6 mt-2">
+            <input type="text" class="form-control" formControlName="stname" placeholder="Enter Full Name">
+        </div>
+
+        <div class="col-lg-6 mt-2">
+            <input type="text" class="form-control" formControlName="course" placeholder="Enter Course">
+        </div>
+
+        <div class="col-lg-6 mt-2">
+            <input type="text" class="form-control" formControlName="fee" placeholder="Enter Fee">
+        </div>
+
+        <div class="col-lg-4 mt-2" *ngIf="!getparamid" (click)="userSubmit()">
+            <button class="btn btn-primary btn-sm">Submit</button>
+        </div>
+
+
+        <div class="col-lg-4 mt-2" *ngIf="getparamid" (click)="userUpdate()">
+            <button class="btn btn-dark btn-sm">Update</button>
+        </div>
+        
+    </form> -->
+
+    <div class="container">
+
+        <h1 class="brand"><span>Phoenix Web Design</span></h1>
+    
+        <div class="wrapper">
+    
+            <!-- COMPANY INFORMATION -->
+            <div class="company-info">
+                <h3>Library Management System</h3>
+<!--     
+                <ul>
+                    <li><i class="fa fa-road"></i> 44 Main Street</li>
+                    <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+                    <li><i class="fa fa-envelope"></i> test@phoenix.com</li>
+                </ul> -->
+            </div>
+            <!-- End .company-info -->
+    
+            <!-- CONTACT FORM -->
+            <div class="contact">
+                <h3>Confirm Book Information</h3>
+    
+                <form id="contact-form" [formGroup]="userForm" (ngSubmit)="userSubmit()">
+                    <p>
+                        <label>Book ID</label>
+                        <input type="text" name="company" id="company" formControlName="id" placeholder="Enter id">
+                    </p>
+    
+                    <p>
+                        <label>Book Title</label>
+                        <input type="text" name="name" id="name" formControlName="book_title" placeholder="book title" required>
+                    </p>
+    
+                    <p>
+                        <label>Author</label>
+                        <input type="email" name="email" id="email" formControlName="author" placeholder="author" required>
+                    </p>
+
+                    <p>
+                        <label>Book Summary</label>
+                        <input type="text" name="phone" id="phone" formControlName="book_summary" placeholder="book summary">
+                    </p>
+
+                    <p>
+                        <label>Book Edition</label>
+                        <input type="text" name="phone" id="phone" formControlName="book_edition" placeholder="book edition">
+                    </p>
+
+                    <p>
+                        <label>Book Publisher</label>
+                        <input type="text" name="phone" id="phone" formControlName="book_publisher" placeholder="book publisher">
+                    </p>
+                    <p>
+                        <label>Book Image</label>
+                        <input type="text" name="phone" id="phone" formControlName="book_img" placeholder="Enter Fee">
+                    </p>
+    
+                    <!-- <p class="full">
+                        <label>Message</label>
+                        <textarea name="message" rows="5" id="message" placeholder="Message"></textarea>
+                    </p> -->
+                </form>
+                <!-- End #contact-form -->
+            </div>
+            <!-- End .contact -->
+            <div class="company-info">
+                <h3></h3>
+<!--     
+                <ul>
+                    <li><i class="fa fa-road"></i> 44 Main Street</li>
+                    <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+                    <li><i class="fa fa-envelope"></i> test@phoenix.com</li>
+                </ul> -->
+            </div>
+            <div class="contact">
+                <h3>Enter Student Information</h3>
+    
+                <form id="contact-form" [formGroup]="userForm" (ngSubmit)="userSubmit()">
+                    <p>
+                        <label>Student Name</label>
+                        <input type="text" name="company" id="company" formControlName="stud_name" placeholder="Enter id">
+                    </p>
+    
+                    <p>
+                        <label>Student ID</label>
+                        <input type="text" name="name" id="name"  placeholder="book title" formControlName="stud_id" required>
+                    </p>
+    
+                    <p>
+                        <label>Student Email Address</label>
+                        <input type="email" name="email" id="email"  placeholder="author" formControlName="stud_email" required>
+                    </p>
+
+                    <p>
+                        <label>Student Phone Number</label>
+                        <input type="text" name="phone" id="phone"  placeholder="book summary" formControlName="stud_phone">
+                    </p>
+    
+                    <!-- <p class="full">
+                        <label>Message</label>
+                        <textarea name="message" rows="5" id="message" placeholder="Message"></textarea>
+                    </p> -->
+    
+                    <p class="full">
+                        <button (click)="userSubmit()" >Submit</button>
+                    </p>
+                    
+    
+                </form>
+                <!-- End #contact-form -->
+            </div>
+        </div>
+        <!-- End .wrapper -->
+    </div>
+    <!-- End .container -->
+    
+    
+</div>

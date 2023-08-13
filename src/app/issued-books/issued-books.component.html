@@ -1,0 +1,72 @@
+<body>
+  <div class="ten">
+    <h1>Issued Books</h1>
+  </div>
+  <div class="cards" *ngFor = 'let us of readData'>
+    <div class="card">
+      <img [src]=us.book_img>
+      <div>
+        <div>{{us.book_title}}</div>
+        <div><b>{{us.author}}</b></div><br>
+        <div>Check out by: {{us.stud_name}}</div>
+        <div>Student ID: {{us.stud_id}}</div>
+        
+      </div>
+      <div>
+        <td>
+          <button class="btn btn-sm btn-danger" (click)="deleteID(us.id)">Delete</button>
+          &nbsp;
+          <a [routerLink]="['/singleData',us.id]" class="btn btn-sm btn-success">Update</a>
+          &nbsp;
+          <!-- <a [routerLink]="['/singleData',us.id]" class="btn btn-sm btn-success">View</a> -->
+
+        </td>
+      </div>
+    </div>
+  </div>
+</body>
+
+<!-- <div class="container mt-5">
+
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Book ID</th>
+            <th scope="col">Book Title</th>
+            <th scope="col">Book Author</th>
+            <th scope="col">Book Summary</th>
+            <th scope="col">Book Edition</th>
+            <th scope="col">Book Publisher</th>
+            <th scope="col">Student Name</th>
+            <th scope="col">Student ID</th>
+            <th scope="col">Student Email</th>
+            <th scope="col">Student Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = 'let us of readData'>
+            <th scope="row">{{us.id}}</th>
+            <td>{{us.book_title}}</td>
+            <td>{{us.author}}</td>
+            <td>{{us.book_summary}}</td>
+            <td>{{us.book_edition}}</td>
+            <td>{{us.book_publisher}}</td>
+            <td>{{us.stud_name}}</td>
+            <td>{{us.stud_id}}</td>
+            <td>{{us.stud_email}}</td>
+            <td>{{us.stud_phone}}</td>
+            <td>
+              <button class="btn btn-sm btn-danger" (click)="deleteID(us.id)">Delete</button>
+              &nbsp;
+              <a [routerLink]="['/singleData',us.id]" class="btn btn-sm btn-success">Update</a>
+              &nbsp;
+              <a [routerLink]="['/singleData',us.id]" class="btn btn-sm btn-success">View</a>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+
+</div> -->
+

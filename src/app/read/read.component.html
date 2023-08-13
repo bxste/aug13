@@ -1,0 +1,37 @@
+<div class="container mt-5">
+
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Book ID</th>
+            <th scope="col">Student Name</th>
+            <th scope="col">course</th>
+            <th scope="col">fee</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = 'let us of readData'>
+            <th scope="row">{{us.id}}</th>
+            <td>{{us.stname}}</td>
+            <td>{{us.course}}</td>
+            <td>{{us.fee}}</td>
+            <td>
+              <button class="btn btn-sm btn-danger" (click)="deleteID(us.id)">Delete</button>
+              &nbsp;
+              <a [routerLink]="['/create',us.id]" class="btn btn-sm btn-success">Update</a>
+              &nbsp;
+              <a [routerLink]="['/singleData',us.id]" class="btn btn-sm btn-success">View</a>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+<div *ngIf="singleData">
+  <p>{{ singleData.id }}</p>
+  <h2>{{ singleData.stname }}</h2>
+  <p>{{ singleData.course }}</p>
+  <p>{{ singleData.fee }}</p>
+  <!-- Other data fields -->
+</div>

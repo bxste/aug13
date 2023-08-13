@@ -1,0 +1,107 @@
+<div class="container">
+    <div *ngIf="errormsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{errormsg}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+      <div *ngIf="successmsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{successmsg}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    
+    <!-- <form [formGroup]="userForm" (ngSubmit)="userSubmit()">
+        <div class="col-lg-6 mt-2">
+            <input type="text" class="form-control" formControlName="id" placeholder="Enter id">
+        </div>
+        
+        <div class="col-lg-6 mt-2">
+            <input type="text" class="form-control" formControlName="stname" placeholder="Enter Full Name">
+        </div>
+
+        <div class="col-lg-6 mt-2">
+            <input type="text" class="form-control" formControlName="course" placeholder="Enter Course">
+        </div>
+
+        <div class="col-lg-6 mt-2">
+            <input type="text" class="form-control" formControlName="fee" placeholder="Enter Fee">
+        </div>
+
+        <div class="col-lg-4 mt-2" *ngIf="!getparamid" (click)="userSubmit()">
+            <button class="btn btn-primary btn-sm">Submit</button>
+        </div>
+
+
+        <div class="col-lg-4 mt-2" *ngIf="getparamid" (click)="userUpdate()">
+            <button class="btn btn-dark btn-sm">Update</button>
+        </div>
+        
+    </form> -->
+
+    <div class="container">
+
+        <h1 class="brand"><span>Phoenix Web Design</span></h1>
+    
+        <div class="wrapper">
+    
+            <!-- COMPANY INFORMATION -->
+            <div class="company-info">
+                <h3>Library Management System</h3>
+    
+                <ul>
+                    <li><i class="fa fa-road"></i> 44 Main Street Mama Mo</li>
+                    <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+                    <li><i class="fa fa-envelope"></i> test@mamamo.com</li>
+                </ul>
+            </div>
+            <!-- End .company-info -->
+    
+            <!-- CONTACT FORM -->
+            <div class="contact">
+                <h3>E-mail Uss</h3>
+    
+                <form id="contact-form" [formGroup]="userForm" (ngSubmit)="userSubmit()">
+                    <p>
+                        <label>Student ID</label>
+                        <input type="text" name="company" id="company" formControlName="id" placeholder="Enter id">
+                    </p>
+    
+                    <p>
+                        <label>Student Full Name</label>
+                        <input type="text" name="name" id="name" formControlName="stname" placeholder="Enter Full Name" required>
+                    </p>
+    
+                    <p>
+                        <label>E-mail Address</label>
+                        <input type="email" name="email" id="email" formControlName="course" placeholder="Enter Email" required>
+                    </p>
+    
+                    <p>
+                        <label>Phone Number</label>
+                        <input type="text" name="phone" id="phone" formControlName="fee" placeholder="Enter Fee">
+                    </p>
+
+                    <!-- <p>
+                        <label>Book Id</label>
+                        <input type="text" name="phone" id="phone" formControlName="book_id" placeholder="Enter Fee">
+                    </p> -->
+    
+                    <!-- <p class="full">
+                        <label>Message</label>
+                        <textarea name="message" rows="5" id="message" placeholder="Message"></textarea>
+                    </p> -->
+    
+                    <p class="full">
+                        <button (click)="userSubmit()" >Submit</button>
+                    </p>
+    
+                </form>
+                <!-- End #contact-form -->
+            </div>
+            <!-- End .contact -->
+    
+        </div>
+        <!-- End .wrapper -->
+    </div>
+    <!-- End .container -->
+    
+</div>

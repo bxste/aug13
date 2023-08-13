@@ -1,0 +1,156 @@
+/* Global Styling */        
+* {
+  box-sizing: border-box;
+  /* CSS Transition */
+  -webkit-transition: background .3s ease-in-out, border .3s ease-in-out;
+  -moz-transition: background .3s ease-in-out, border .3s ease-in-out;
+  -ms-transition: background .3s ease-in-out, border .3s ease-in-out;
+  -o-transition: background .3s ease-in-out, border .3s ease-in-out;
+  transition: background .3s ease-in-out, border .3s ease-in-out;
+}
+
+.clearfix::after {
+  content: “”;
+  clear: both;
+  display: table;
+}
+
+h1 {
+  padding: 25px 0 25px 0;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+
+/* The Wrapper and container*/        
+.itemWrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+.itemContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.item {
+  width: 50%;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  float: left;
+
+}
+
+@media only screen and (max-width: 1100px) {
+  .itemContainer {
+      max-width: 550px;
+      margin: 0 auto;
+  }
+
+  .item {
+      width: 50%;
+      margin-bottom: 15px;
+      padding: 0 10px;
+      float: left;
+
+  }
+}
+
+@media only screen and (max-width: 550px) { 
+  .itemContainer {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  .item {
+      width: 70%;
+      padding: 0 10px;
+      float: none;
+      margin: 0 auto;
+      margin-bottom: 15px;
+  }
+}
+
+/* Here is the item box css */        
+.itemContent { 
+  width: 100%; 
+  border-radius: 3px; border: 2px solid  #cccccc; 
+  height: 380px;
+  position: relative; 
+
+}
+/* item or image container */
+.itemContentItem { text-align: center; padding: 25px; }
+.itemContentItem img {max-width: 150px;}
+
+
+.overDiv {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+}
+
+/* item description */
+.itemContentTitle { 
+  position: relative;
+  width: 100%;
+  background-color:  rgba(242, 242, 242, 0.9);
+  text-align: center;
+  padding: 10px 15px;
+  color: #404040;
+  height: 100px;
+
+
+}
+
+  .itemContentTitleHover {
+      color: #fff !important;
+      background-color: rgba(247, 128, 49, 0.9) !important;
+
+  }
+  .itemContentTitle h2 {
+      font-size: 1em;
+      font-family: 'Open Sans', sans-serif;
+  }
+
+
+.itemContentInfo { 
+  position: relative;
+  background-color:  rgba(242, 242, 242, 0.9);
+  text-align: justify;
+  color: #404040;
+  overflow: hidden;
+  height: 0px;
+}
+
+  .itemContentInfo p { 
+      font-size: 0.9em;
+      line-height: 1.6em;
+      margin-bottom: 1.5em;
+      color: #797979;
+      padding: 10px 15px;
+  }
+
+.itemContentDownload {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px 15px;
+  height: 66px;
+}
+
+  .itemBtn {
+     padding: 10px 30px;
+      display: inline-block;
+      border: 2px solid #d9d9d9;
+      border-radius: 5px;
+      background-color: #fff;
+      color: #000000;
+  }

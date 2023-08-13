@@ -1,0 +1,107 @@
+<div class="container mt-5">
+    <!-- show message -->
+    <div *ngIf="successmsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>{{successmsg}}</strong> 
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <!-- <table class="table table-bordered">
+         <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Book Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Book Summary</th>
+            <th scope="col">Book Edition</th>
+            <th scope="col">Book Publisher</th>
+
+          </tr>
+        </thead> 
+       <tbody>
+          <tr *ngFor = 'let us of readDataBooks'>
+            <th scope="row">{{us.id}}</th>
+            <td>{{us.book_title}}</td>
+            <td>{{us.author}}</td>
+            <td>{{us.book_summary}}</td>
+            <td>{{us.book_edition}}</td>
+            <td>{{us.book_publisher}}</td>
+            <td>
+              <button class="btn btn-sm btn-danger" (click)="deleteID(us.id)">Delete</button>
+              &nbsp;
+              <a [routerLink]="['/singleData',us.id]" class="btn btn-sm btn-success">View</a>
+            </td>
+          </tr>
+        </tbody>
+        
+      </table> -->
+
+      
+</div>
+<h1>Category: 
+  <button routerLink="/books" class="button" >All</button>
+  <button routerLink="/novel" class="button" >Novel</button>
+  <button routerLink="/fantasy" class="button" >Fantasy</button>
+  <!-- <button routerLink="/programming" class="button">Programming</button> -->
+  <button routerLink="/fiction" class="button">Fiction</button>
+</h1>
+<div class="center">
+
+  
+  <div *ngFor = 'let us of readDataBooks'>
+    <div class="card">
+      <div class="additional">
+        <div class="user-card">
+          <img [src]=us.book_img>
+        </div>
+        <div class="more-info">
+          <!-- <h3>{{us.book_title}}</h3>
+          <p>Author: {{us.author}}</p>
+          <div class="coords">
+            <span>Book Edition</span>
+            <span>{{us.book_edition}}</span>
+          </div>
+          <div class="coords">
+            <span>Book Publisher</span>
+            <span>{{us.book_publisher}}</span>
+          </div> -->
+
+          <div class="stats">
+            <div>
+              <div class="title">Awards</div>
+              <i class="fa fa-trophy"></i>
+              <div class="value">2</div>
+            </div>
+            <div>
+              <div class="title">Matches</div>
+              <i class="fa fa-gamepad"></i>
+              <div class="value">27</div>
+            </div>
+            <div>
+              <div class="title">Pals</div>
+              <i class="fa fa-group"></i>
+              <div class="value">123</div>
+            </div>
+            <div>
+              <div class="title">Coffee</div>
+              <i class="fa fa-coffee"></i>
+              <div class="value infinity">∞</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="general">
+        <h3>{{us.book_title}}</h3>
+        <p>Book Id: {{us.id}}</p>
+        <p>Author: {{us.author}}</p>
+        <p>{{us.book_summary}}</p>
+      </div>
+    </div>
+    <div class="wrap2">
+      <button [routerLink]="['/singleData',us.id]" class="addtolist">Add To List</button>
+    </div>
+  </div>
+  
+</div>
+
+
+
+
