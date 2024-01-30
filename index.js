@@ -71,7 +71,7 @@ app.get('/total-row-count', (req, res) => {
 
   db.query(query, (error, results) => {
     if (error) {
-      console.error('Error executing query:', error);
+      console.error('Errror executing query:', error);
       res.status(500).json({ error: 'Internal Server Error' });
     } else {
       res.json({ count: results[0].totalCount });
